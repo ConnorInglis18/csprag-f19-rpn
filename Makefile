@@ -1,4 +1,6 @@
 test:
 	python3 -m unittest
 
-.PHONY: test
+tests: test
+
+.PHONY: test, tests
