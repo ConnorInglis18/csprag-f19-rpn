@@ -1,0 +1,26 @@
+
+-------------rpn.py------------------
+#!/usr/bin/env python3		#python just sees this as a comment. A shell sees this and makes it executable
+
+def calculate(arg):
+  pass				#pass is like a ; in C++, just a noop
+
+def main():
+  while True:
+    calculate(input("rpn calc> "))
+
+if __name__ == '__main__': #aka dunder main (double _ main)
+  main()
+
+
+----------------test_rpn.py-----------		// must be of form test_<name>.py
+import unittest
+import rpn
+
+class TestBasics(unittest.TestCase):
+  def test_add(self):
+    result = rpn.calculate("1 1 +")
+    self.assertEqual(2, result)
+
+
+python3 -m unittest		there is a module in my directory, python, go find it, and run the tests		
