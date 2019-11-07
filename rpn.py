@@ -7,13 +7,14 @@ operators = {
   '-': operator.sub,
   '*': operator.mul,
   '/': operator.floordiv,
+  '^': operator.pow,
 }
 
 def calculate(arg):
   stack = list()
   for token in arg.split():
     try:
-      value = int(token)
+      value = float(token)
       stack.append(value)
     except ValueError:
       function = operators[token]
